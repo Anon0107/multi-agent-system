@@ -1,6 +1,6 @@
 # multi-agent-system
 
-Implementation of the ReAct (Reason + Act) agent pattern from scratch
+ReAct (Reason + Act) agent built from scratch — no frameworks.
 
 ## How It Works
 
@@ -16,15 +16,17 @@ Implementation of the ReAct (Reason + Act) agent pattern from scratch
 | `calculator` | Postfix expression (e.g. `42 47 *`) | Evaluates arithmetic using a stack |
 | `read_file` | File path | Returns file contents |
 | `write_file` | `path,content` | Writes content to file |
+| `web_search` | Search query | Searches the web via Tavily |
+| `get_weather` | City name | Returns weather data for a city |
+| `search_news` | `query,country` | Searches news by query and country |
+| `analyze_sentiment` | Text string | Analyzes sentiment of given text |
+| `search_documents` | Search query | Queries local BanG Dream document database |
 
 ## Setup
 
 ```bash
 pip install -r requirements.txt
-```
-
-```bash
-cp .env.example .env # Fill in your API keys
+cp .env.example .env
 ```
 
 ## Usage
@@ -32,12 +34,10 @@ cp .env.example .env # Fill in your API keys
 ```bash
 py -3.11 agent.py
 ```
-Test prompt:
-```
-User: Read input.txt, multiply the number inside by 47, write the result to output.txt, then tell me what you wrote.
-```
 
 ## Stack
 
 - Python 3.11
 - Anthropic SDK (`claude-haiku-4-5-20251001`)
+- Tavily
+- MCP
