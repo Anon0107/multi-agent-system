@@ -13,5 +13,5 @@ def web_search(query: str) -> str:
     )
     res = ''
     for i,result in enumerate(response['results']):
-        res += f"Website {i+1}:\n" + result["content"] + "\n\n"
+        res += f"Website {i+1}:\n" + result["content"] + "\nSource: " + result["url"] + "\n\n"
     return res

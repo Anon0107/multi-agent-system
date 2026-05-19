@@ -49,8 +49,8 @@ Specialized agents execute sequentially, each passing output to the next.
 | Agent | Role |
 |---|---|
 | `Researcher` | Gathers information online via Tavily |
-| `Analyst`(To be implemented) | Evaluates quality and relevance of findings |
-| `Writer`(To be implemented) | Produces the final structured report |
+| `Analyst` | Evaluates quality and relevance of findings |
+| `Writer` | Produces the final structured report |
 
 ### Usage
 
