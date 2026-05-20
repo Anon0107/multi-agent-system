@@ -1,21 +1,23 @@
 research_task:
   description: >
-    Conduct a deep research online about the topic, {topic}. Make sure the information you find is relevant.
-    Ensure that source being used is flagged.
+    Conduct a deep research online about the topic, {topic} in different perspective.
+    Make sure the information you find is relevant. Ensure that source being used is flagged.
   expected_output: >
     A list with 5 most relevant information about {topic} and used source.
   agent: researcher
 analyst_task:
   description: >
-    Construct a well-structured summary based on raw research data of {topic}. Flag out the relevance scores of
-    each source and extract key themes.
+    Using the raw research data obtained, construct a well-structured summary based on raw research data of 
+    {topic}. Evaluate each point about {topic}. Flag out the relevance scores of each findings,
+    flag weak and unverified sources and extract key themes.
   expected_output: >
     A string with concise and well-structured summary about {topic}
   agent: analyst
 write_task:
   description: >
-    Write a well-structured and detailed report based on summary of a {topic} given. Ensure that the report is
-    informative and shows deep understanding in {topic}. Make sure to flag sources.
+    Based on the structured summary by analyst, Write a well-structured and detailed research report 
+    on {topic}. Ensure that the report is informative and shows deep understanding in {topic}. 
+    Make sure to include executive summary, key findings, detailed analysis and flag sources.
   expected_output: >
     A string with well-structured research report about {topic}
   agent: writer
